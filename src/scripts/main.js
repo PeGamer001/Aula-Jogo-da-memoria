@@ -20,3 +20,7 @@ for(let i = 4;i <= 10;i += 2) {
     //colocar o op como filho de select
     select.appendChild(op)
 }
+
+button.addEventListener("", () => {
+    alert("ogly bogly")
+})
