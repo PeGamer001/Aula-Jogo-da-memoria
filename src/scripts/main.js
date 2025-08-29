@@ -2,6 +2,7 @@
 let menu= document.getElementById('menu');
 let select= document.getElementById('numCards');
 let button= document.getElementById('start');
+let board= document.getElementById('board');
 
 //fazer um loop for--> inicia no numero 4. menor oi igual a 10. incrementa 2 a cada loop
 
@@ -21,6 +22,10 @@ for(let i = 4;i <= 10;i += 2) {
     select.appendChild(op)
 }
 
-button.addEventListener("", () => {
-    alert("ogly bogly")
+button.addEventListener("click", () => {
+    // Fazendo o menu ficar escondido
+    menu.classList.add("hidden")
+    //  Fazendo o tabuleiro aparecer
+    board.classList.remove("hidden")
 })
+button.click()
