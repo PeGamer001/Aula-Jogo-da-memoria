@@ -24,8 +24,25 @@ class BoardManager {
 
     }
     // Fill
-    Fill(numberCards){}
-    addCard(card){}
+    Fill(numberCards){
+        // Checar se o numero enviado de cartas for maior que o numero de imagens.
+        if (numberCards > 2 * this.numImgs) {
+
+            // Mostrar mensagem de erro
+            console.error(`Erro: Não há imagens suficientes para ${numberCards} cartas.`);
+
+            // Ajustar o numero de cartas, e continuar o jogo
+            numberCards = 2 * this.numImgs;
+        }
+        
+        this.Clear();                         // Limpar o tabuleiro
+        this.addCard(this.cardManager.gen(1)) // Adicionar uma nova carta ao tabuleiro.
+    }
+    // AddCard -> Adiciona UMA carta no tabuleiro
+    addCard(card){
+        this.node.appendChild(card);
+
+    }
 
 
 

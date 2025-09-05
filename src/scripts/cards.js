@@ -17,4 +17,6 @@ class CardManager {
         // Retornar o clone
         return clone;
     }
+
+    
 }
